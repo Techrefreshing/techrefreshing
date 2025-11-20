@@ -24,7 +24,7 @@ async function initAggregator() {
             // Fill vanilla card with feed data
             feedCard.innerHTML = `
                 <div class="p-card__content">
-                    <p class="p-heading--6 u-no-margin--bottom">${item.sourceName}</p>
+                    <p class="p-heading--6">${item.sourceName}</p>
                     <hr class="u-sv-1" />
                     <h3 class="p-heading--4">
                         <a href="${item.link}" target="_blank" rel="noopener noreferrer">
