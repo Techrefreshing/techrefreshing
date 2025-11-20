@@ -1,8 +1,8 @@
 const fs = require('fs/promises');
 const Parser = require('rss-parser');
 
-const FEEDS_FILE = 'feeds.json';
-const OUTPUT_FILE = 'feed-data.json'; 
+const FEEDS_FILE = './feeds.json';
+const OUTPUT_FILE = './feed-data.json'; 
 
 const parser = new Parser({
     // Only fetch the newest blog post from each feed to save on bandwidth
