@@ -10,7 +10,6 @@
     <title>Ubuntu Planet NG</title>
     <link rel="icon" type="image/png" sizes="48x48" href="ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f">
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.8.0.min.css" />
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -37,7 +36,7 @@
       <li class="p-navigation__item is-selected">
         <a class="p-navigation__link" href="#">Feeds</a>
       </li>
-      <li class="p-navigation__item is-selected">
+      <li class="p-navigation__item">
         <a class="p-navigation__link" href="#">About</a>
       </li>
       <li class="p-navigation__item">
@@ -48,10 +47,28 @@
 </div>
 </header>
 
-    <main id="feed-container">
-        <p id="loading-message">Loading feeds...</p>
-    </main>
 
+<div class="p-section--hero">
+  <div class="row">
+    <div class="col-8">
+      <h1 class="p-heading--1 u-no-margin--bottom">Ubuntu Planet</h1>
+      <p>
+        See what Ubuntu Members around the world are saying!
+      </p>
+    </div>
+    <div class="col-4 u-vertically-center">
+      <img src="https://raw.githubusercontent.com/aaronprisk/terra/refs/heads/main/img/planet.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="p-strip">
+  <div class="row">
+    <main id="feed-container" class="col-12 p-card-group u-clearfix">
+      <p id="loading-message">Loading feeds...</p>
+    </main>
+  </div>
+</div>
 <footer class="p-strip--dark l-docs__subgrid">
   <div class="l-docs__sidebar">
     <p style="padding-left: 1.5rem"></p>
@@ -73,8 +90,6 @@
         </nav>
     </div>
 </footer>    
-
-    
     <script src="script.js"></script>
 </body>
 </html>
