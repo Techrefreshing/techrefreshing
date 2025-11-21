@@ -1,52 +1,129 @@
 const PROCESSED_FEEDS_FILE = './feed-data.json';
 const container = document.getElementById('feed-container');
+const BATCH_SIZE = 12; // # of cards to render
+
+let allFeeds = [];
+let currentIndex = 0;
+let showMoreButtonWrapper = null; 
+
+function renderBatch() {
+    const endIndex = Math.min(currentIndex + BATCH_SIZE, allFeeds.length);
+    const batch = allFeeds.slice(currentIndex, endIndex);
+
+    batch.forEach(item => {
+        const columnWrapper = document.createElement('div');
+        columnWrapper.className = 'col-4 u-spacing'; 
+
+        const feedCard = document.createElement('div');
+        feedCard.className = 'p-card'; 
+        
+        const formattedDate = new Date(item.date).toLocaleDateString();
+        
+        const hasSnippet = item.snippet && item.snippet.length > 0;
+        
+        feedCard.innerHTML = `
+            <div class="p-card__content">
+                <p class="p-heading--6 u-no-margin--bottom">${item.sourceName}</p>
+                <hr class="u-sv-1" />
+                <h3 class="p-heading--4">
+                    <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+                        ${item.title}
+                    </a>
+                </h3>
+                <p class="u-small-text">
+                    Published: <strong>${formattedDate}</strong>
+                </p>
+                
+                ${hasSnippet ? `
+                    <div class="snippet-content is-hidden">
+                        <p class="u-no-margin--bottom u-text--muted">${item.snippet}</p>
+                    </div>
+                    <button class="p-button--base u-align-text--left expand-snippet" type="button">
+                        <span class="expand-text">Show snippet</span>
+                        <i class="p-icon--caret-down" aria-hidden="true"></i>
+                    </button>
+                ` : ''}
+            </div>
+        `;
+        
+        if (hasSnippet) {
+            const expandButton = feedCard.querySelector('.expand-snippet');
+            expandButton.addEventListener('click', toggleSnippet);
+        }
+
+        columnWrapper.appendChild(feedCard);
+        container.appendChild(columnWrapper);
+    });
+
+    currentIndex = endIndex;
+    checkLoadMoreStatus();
+}
+
+function toggleSnippet(event) {
+    const button = event.currentTarget;
+    const content = button.parentNode.querySelector('.snippet-content'); 
+    const icon = button.querySelector('i');
+    const textSpan = button.querySelector('.expand-text');
+
+    content.classList.toggle('is-hidden');
+    
+    if (content.classList.contains('is-hidden')) {
+        textSpan.textContent = 'Show snippet';
+        icon.classList.remove('p-icon--caret-up');
+        icon.classList.add('p-icon--caret-down');
+    } else {
+        textSpan.textContent = 'Hide snippet';
+        icon.classList.remove('p-icon--caret-down');
+        icon.classList.add('p-icon--caret-up');
+    }
+}
+
+function createLoadMoreButtonWrapper() {
+    const buttonWrapper = document.createElement('div');
+    buttonWrapper.id = 'load-more-wrapper';
+    buttonWrapper.className = 'col-12 u-align-text--center u-sv-4';
+    
+    const button = document.createElement('button');
+    button.className = 'p-button--base is-prominent';
+    button.textContent = 'Load More Feeds';
+    button.addEventListener('click', renderBatch);
+    
+    buttonWrapper.appendChild(button);
+    return buttonWrapper;
+}
+
+function checkLoadMoreStatus() {
+    if (showMoreButtonWrapper) {
+        showMoreButtonWrapper.remove(); 
+    }
+    
+    if (currentIndex < allFeeds.length) {
+        showMoreButtonWrapper = createLoadMoreButtonWrapper();
+        container.appendChild(showMoreButtonWrapper);
+    } else {
+        const allDone = document.createElement('div');
+        allDone.className = 'col-12 u-align-text--center u-sv-4';
+        allDone.innerHTML = '<p class="u-text--muted">End of all feeds.</p>';
+        container.appendChild(allDone);
+    }
+}
 
 async function initAggregator() {
     try {
         const response = await fetch(PROCESSED_FEEDS_FILE);
-        const processedFeeds = await response.json();
+        allFeeds = await response.json(); 
         
         document.getElementById('loading-message')?.remove(); 
 
-        processedFeeds.forEach(item => {
-            
-            // Create vanilla container for the column 
-            const columnWrapper = document.createElement('div');
-            columnWrapper.className = 'col-4 u-spacing'; 
-
-            // Create the p-card for feed
-            const feedCard = document.createElement('div');
-            feedCard.className = 'p-card'; 
-            
-            // Format the date for display
-            const formattedDate = new Date(item.date).toLocaleDateString();
-
-            // Fill vanilla card with feed data
-            feedCard.innerHTML = `
-                <div class="p-card__content">
-                    <p class="p-heading--6">${item.sourceName}</p>
-                    <hr class="u-sv-1" />
-                    <h3 class="p-heading--4">
-                        <a href="${item.link}" target="_blank" rel="noopener noreferrer">
-                            ${item.title}
-                        </a>
-                    </h3>
-                    <p class="u-small-text">
-                        Published: <strong>${formattedDate}</strong>
-                    </p>
-                </div>
-            `;
-            
-            // Append the card to the column wrapper
-            columnWrapper.appendChild(feedCard);
-            
-            // Append the column wrapper to the main container
-            container.appendChild(columnWrapper);
-        });
-
+        if (allFeeds.length === 0) {
+            container.innerHTML = '<div class="col-12"><p class="p-notification--information">No feeds found.</p></div>';
+            return;
+        }
+        renderBatch(); 
+        
     } catch (error) {
         console.error("Failed to load processed feed data.", error);
-        container.innerHTML = '<p class="p-notification--negative">Could not load member feeds. Please check back later. If issue persists, post issue on planet Github repo.</p>';
+        container.innerHTML = '<div class="col-12"><p class="p-notification--negative">Could not load the latest content. Please check back later.</p></div>';
     }
 }
 
