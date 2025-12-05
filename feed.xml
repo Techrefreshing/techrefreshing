@@ -6,7 +6,7 @@
     <description>Fresh posts from the Ubuntu Planet</description>
     <language>en</language>
     <generator>json-to-rss (GitHub Actions)</generator>
-    <lastBuildDate>Thu, 04 Dec 2025 01:51:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 01:52:21 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ubuntu-community-team.github.io/terra//feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -2043,21 +2043,24 @@ be able to extend my test suite to all major platforms and operating systems.</p
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img fetchpriority="high" decoding="async" width="800" height="500" src="https://jonathancarter.org/files/images/wllpaper.jpeg" alt="" class="wp-image-11957" style="width:798px;height:auto" srcset="https://jonathancarter.org/files/images/wllpaper.jpeg 800w, https://jonathancarter.org/files/images/wllpaper-555x347.jpeg 555w, https://jonathancarter.org/files/images/wllpaper-768x480.jpeg 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure></div>
+<figure class="aligncenter size-full is-resized"><img fetchpriority="high" decoding="async" width="800" height="500" src="https://jonathancarter.org/files/images/wllpaper.jpeg" alt="" class="wp-image-11957" style="width:798px;height:auto" srcset="https://jonathancarter.org/files/images/wllpaper.jpeg 800w, https://jonathancarter.org/files/images/wllpaper-555x347.jpeg 555w, https://jonathancarter.org/files/images/wllpaper-768x480.jpeg 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure>
+</div>
 
 
 <p>And I particularly like the Plymouth theme. It&#8217;s very minimal, and it reminds me of the Toy Story Trixie character, it&#8217;s almost like it helps explain the theme:</p>
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-large is-resized"><img decoding="async" width="1024" height="644" src="https://jonathancarter.org/files/images/certop-1024x644.jpeg" alt="" class="wp-image-11961" style="width:1024px;height:auto" srcset="https://jonathancarter.org/files/images/certop-1024x644.jpeg 1024w, https://jonathancarter.org/files/images/certop-555x349.jpeg 555w, https://jonathancarter.org/files/images/certop-768x483.jpeg 768w, https://jonathancarter.org/files/images/certop.jpeg 1426w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+<figure class="aligncenter size-large is-resized"><img decoding="async" width="1024" height="644" src="https://jonathancarter.org/files/images/certop-1024x644.jpeg" alt="" class="wp-image-11961" style="width:1024px;height:auto" srcset="https://jonathancarter.org/files/images/certop-1024x644.jpeg 1024w, https://jonathancarter.org/files/images/certop-555x349.jpeg 555w, https://jonathancarter.org/files/images/certop-768x483.jpeg 768w, https://jonathancarter.org/files/images/certop.jpeg 1426w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
 
 
 <p class="has-text-align-center"><em>Plymouth (start-up/shutdown) theme.</em></p>
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-full"><img decoding="async" width="600" height="631" src="https://jonathancarter.org/files/images/trixie.jpeg" alt="" class="wp-image-11963" srcset="https://jonathancarter.org/files/images/trixie.jpeg 600w, https://jonathancarter.org/files/images/trixie-528x555.jpeg 528w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+<figure class="aligncenter size-full"><img decoding="async" width="600" height="631" src="https://jonathancarter.org/files/images/trixie.jpeg" alt="" class="wp-image-11963" srcset="https://jonathancarter.org/files/images/trixie.jpeg 600w, https://jonathancarter.org/files/images/trixie-528x555.jpeg 528w" sizes="(max-width: 600px) 100vw, 600px" /></figure>
+</div>
 
 
 <p class="has-text-align-center"><a href="https://disney.fandom.com/wiki/Trixie">Trixie, the character from Toy Story</a> that was chosen as the codename for Debian 13.</p>
@@ -2072,28 +2075,32 @@ be able to extend my test suite to all major platforms and operating systems.</p
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-large"><img decoding="async" width="1024" height="771" src="https://jonathancarter.org/files/images/cake-13-1024x771.jpg" alt="" class="wp-image-11949" style="object-fit:cover" srcset="https://jonathancarter.org/files/images/cake-13-1024x771.jpg 1024w, https://jonathancarter.org/files/images/cake-13-555x418.jpg 555w, https://jonathancarter.org/files/images/cake-13-768x578.jpg 768w, https://jonathancarter.org/files/images/cake-13.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+<figure class="aligncenter size-large"><img decoding="async" width="1024" height="771" src="https://jonathancarter.org/files/images/cake-13-1024x771.jpg" alt="" class="wp-image-11949" style="object-fit:cover" srcset="https://jonathancarter.org/files/images/cake-13-1024x771.jpg 1024w, https://jonathancarter.org/files/images/cake-13-555x418.jpg 555w, https://jonathancarter.org/files/images/cake-13-768x578.jpg 768w, https://jonathancarter.org/files/images/cake-13.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
 
 
 <p>For many releases, I&#8217;ve been the only person from South Africa doing ISO smoke-testing, and this time was quite different, since everyone else in the photo below tested an image except for me. I basically just provided some support and helped out with getting salsa/wiki accounts and some troubleshooting. It went nice and fast, and it&#8217;s always a big relief when there are no showstoppers for the release.</p>
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-large"><img decoding="async" width="1024" height="590" src="https://jonathancarter.org/files/images/trixiecake2-1024x590.jpg" alt="" class="wp-image-11951" srcset="https://jonathancarter.org/files/images/trixiecake2-1024x590.jpg 1024w, https://jonathancarter.org/files/images/trixiecake2-555x320.jpg 555w, https://jonathancarter.org/files/images/trixiecake2-768x443.jpg 768w, https://jonathancarter.org/files/images/trixiecake2.jpg 1136w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></div>
+<figure class="aligncenter size-large"><img decoding="async" width="1024" height="590" src="https://jonathancarter.org/files/images/trixiecake2-1024x590.jpg" alt="" class="wp-image-11951" srcset="https://jonathancarter.org/files/images/trixiecake2-1024x590.jpg 1024w, https://jonathancarter.org/files/images/trixiecake2-555x320.jpg 555w, https://jonathancarter.org/files/images/trixiecake2-768x443.jpg 768w, https://jonathancarter.org/files/images/trixiecake2.jpg 1136w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+</div>
 
 
 <p class="has-text-align-center"><em>My dog was really wishing hard that the cake would slip off.</em></p>
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-full"><img decoding="async" width="600" height="221" src="https://jonathancarter.org/files/images/cambalache.jpg" alt="" class="wp-image-11970" srcset="https://jonathancarter.org/files/images/cambalache.jpg 600w, https://jonathancarter.org/files/images/cambalache-555x204.jpg 555w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+<figure class="aligncenter size-full"><img decoding="async" width="600" height="221" src="https://jonathancarter.org/files/images/cambalache.jpg" alt="" class="wp-image-11970" srcset="https://jonathancarter.org/files/images/cambalache.jpg 600w, https://jonathancarter.org/files/images/cambalache-555x204.jpg 555w" sizes="(max-width: 600px) 100vw, 600px" /></figure>
+</div>
 
 
 <p>Packaging-wise, I only have one big new package for Trixie, and that&#8217;s <a href="https://github.com/xjuan/cambalache/tree/main">Cambalache</a>, a rapid application design UI builder for GTK3/GTK4.</p>
 
 
 <div class="wp-block-image">
-<figure class="aligncenter size-full is-resized"><img decoding="async" width="752" height="423" src="https://jonathancarter.org/files/images/image-29.png" alt="" class="wp-image-11972" style="width:616px;height:auto" srcset="https://jonathancarter.org/files/images/image-29.png 752w, https://jonathancarter.org/files/images/image-29-555x312.png 555w" sizes="(max-width: 752px) 100vw, 752px" /></figure></div>
+<figure class="aligncenter size-full is-resized"><img decoding="async" width="752" height="423" src="https://jonathancarter.org/files/images/image-29.png" alt="" class="wp-image-11972" style="width:616px;height:auto" srcset="https://jonathancarter.org/files/images/image-29.png 752w, https://jonathancarter.org/files/images/image-29-555x312.png 555w" sizes="(max-width: 752px) 100vw, 752px" /></figure>
+</div>
 
 
 <p>The version in trixie is 0.94.1-3 and version 1.0 was recently released, so I&#8217;ll get that updated in forky and backport it if possible.</p>
@@ -9073,7 +9080,7 @@ We believe the user should ultimately be in control of all access to their priva
       <link>https://blogs.gnome.org/lferrett/2013/08/03/i-know-what-you-did-this-summer/</link>
       <guid isPermaLink="true">https://blogs.gnome.org/lferrett/2013/08/03/i-know-what-you-did-this-summer/</guid>
       <pubDate>Sat, 03 Aug 2013 20:50:51 GMT</pubDate>
-      <description><![CDATA[<p>For your visual pleasure, here are some fresh screenshots from GNOME 3.9.5. Enjoy <img src="https://s.w.org/images/core/emoji/16.0.1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+      <description><![CDATA[<p>For your visual pleasure, here are some fresh screenshots from GNOME 3.9.5. Enjoy <img src="https://s.w.org/images/core/emoji/17.0.2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
 <h3><span style="font-size: 1.17em">Weather and Maps</span></h3>
 <figure id="attachment_159" aria-describedby="caption-attachment-159" style="width: 384px" class="wp-caption alignnone"><a href="http://blogs.gnome.org/lferrett/files/2013/08/weather-and-maps.jpg"><img fetchpriority="high" decoding="async" class=" wp-image-159 " alt="Plan your vacations!" src="http://blogs.gnome.org/lferrett/files/2013/08/weather-and-maps.jpg" width="384" height="307" /></a><figcaption id="caption-attachment-159" class="wp-caption-text">Plan your vacations!</figcaption></figure>
 <h3>Disk Usage and Notes</h3>
