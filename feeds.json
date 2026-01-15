@@ -5,6 +5,12 @@
     "url": "https://discourse.ubuntu.com/c/uwn/uwn-issues/419.rss"
   },
   {
+    "name": "Techrefreshing Linux News",
+    "nick": "techrefreshing",
+    "url": "https://techrefreshing.com/feed/"
+     },
+    
+  {
     "name": "Ubuntu Classroom",
     "nick": "nhandler",
     "url": "https://ubuntuclassroom.wordpress.com/feed/?mrss=off"
